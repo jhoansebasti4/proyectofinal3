@@ -27,7 +27,7 @@ Para este proyecto, debes crear una plataforma con sistema de roles. Existen tre
 - Ver y cambiar las clases en las que está registrado.
 - Ver sus calificaciones.
 
-## Archivos del proyecto
+## Archivos proporcionados en este repositorio
 
 En este repositorio te hemos dado los siguientes archivos:
 
