@@ -27,6 +27,13 @@ Para este proyecto, debes crear una plataforma con sistema de roles. Existen tre
 - Ver y cambiar las clases en las que está registrado.
 - Ver sus calificaciones.
 
+## Archivos del proyecto
+
+En este repositorio te hemos dado los siguientes archivos:
+
+- En la carpeta `assets` encontrarás un archivo llamado `logo.jpg` el cual es el logo de la universidad en cuestión.
+- En la carpeta `design` encontrarás tres carpetas: `admin`, `alumno` y `maestro`. En cada una se encuentran las respectivas capturas de pantalla que ilustran la funcionalidad del proyecto. Recuerda que <b>NO</b> es 100% obligatorio utilizar el mismo diseño. Sin embargo, debes aún **respetar la funcionalidad y los colores del logo que te hemos proporcionado**.
+
 ## Consideraciones para la calificación
 
 A continuación te presentaremos los puntos que se tomarán en cuenta para la calificacion del proyecto:
@@ -40,7 +47,7 @@ A continuación te presentaremos los puntos que se tomarán en cuenta para la ca
 - Debes desplegar tu proyecto en algún hosting (como sugerencia, puedes usar 000webhost: https://www.000webhost.com/), y el link de tu página desplegada debe estar en el repositorio de GitHub.
 - Si existiesen requerimientos extras que se hayan realizado (de la lista de consideraciones opcionales o de tu propia iniciativa), debes dejar una nota en el archivo README.md de tu repositorio en GitHub que especifique cada una.
 
-### Consideraciones OPCIONALES que podrían sumar puntos:
+## Consideraciones OPCIONALES que podrían sumar puntos:
 
 - El diseño debe ser 100% responsive.
 - Activar o desactivar a un usuario en el panel de administrador (quiere decir que si un usuario ha sido desactivado, no debería poder acceder con sus credenciales hasta que sea activado nuevamente).
