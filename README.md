@@ -44,10 +44,9 @@ A continuación te presentaremos los puntos que se tomarán en cuenta para la ca
 - El proyecto debe ser realizado con Tailwind CSS y este debe ser instalado por medio de la línea de comandos o la terminal, no debes usar el CDN.
 - El proyecto debe ser estructurado de forma que sea fácil de entender y mantener.
 - Debes subir los archivos de tu proyecto a un repositorio en GitHub y este debe tener más de un commit.
-- Debes desplegar tu proyecto en algún hosting (como sugerencia, puedes usar 000webhost: https://www.000webhost.com/), y el link de tu página desplegada debe estar en el repositorio de GitHub.
 - Si existiesen requerimientos extras que se hayan realizado (de la lista de consideraciones opcionales o de tu propia iniciativa), debes dejar una nota en el archivo README.md de tu repositorio en GitHub que especifique cada una.
 
-## Consideraciones OPCIONALES que podrían sumar puntos:
+## Consideraciones OPCIONALES que suman puntos:
 
 - El diseño debe ser 100% responsive.
 - Activar o desactivar a un usuario en el panel de administrador (quiere decir que si un usuario ha sido desactivado, no debería poder acceder con sus credenciales hasta que sea activado nuevamente).
