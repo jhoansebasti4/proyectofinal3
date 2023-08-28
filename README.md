@@ -15,6 +15,8 @@ Para este proyecto, debes crear una plataforma con sistema de roles. Existen tre
 - Crear, Leer, Actualizar y Eliminar registros de maestros (CRUD).
 - Crear, Leer, Actualizar y Eliminar registros de alumnos (CRUD).
 - Crear, Leer, Actualizar y Eliminar clases/materias/cursos registrados (CRUD).
+- Relacionar un maestro a un curso (o más, si gustas).
+- Eliminar maestros no requiere que dicho maestro no tenga cursos asignados, se puede eliminar un maestro sin necesidad de dicha corroboración.
 - Cambiar el rol de cada usuario (no se permite crear nuevos roles).
 
 ### MAESTRO
@@ -25,7 +27,6 @@ Para este proyecto, debes crear una plataforma con sistema de roles. Existen tre
 ### ALUMNO
 
 - Ver y cambiar las clases en las que está registrado.
-- Ver sus calificaciones.
 
 ## Archivos proporcionados en este repositorio
 
@@ -51,9 +52,10 @@ A continuación te presentaremos los puntos que se tomarán en cuenta para la ca
 - El diseño debe ser 100% responsive.
 - Activar o desactivar a un usuario en el panel de administrador (quiere decir que si un usuario ha sido desactivado, no debería poder acceder con sus credenciales hasta que sea activado nuevamente).
 - Las tablas tienen botones que permiten exportar los datos de las mismas en formato PDF, Excel, etc.
+- Las tablas están paginadas.
 - El admin puede ver la cantidad de alumnos inscritos en cada clase.
-- Cada maestro puede Crear, Leer, Actualizar y Eliminar calificaciones de sus alumnos.
-- El alumno puede ver en la pestaña "Ver Calificaciones" un mensaje dejado por el maestro.
+- Cada maestro puede Crear, Leer, Actualizar y Eliminar calificaciones y comentarios de sus alumnos.
+- El alumno puede ver en la pestaña "Ver Calificaciones" un mensaje dejado por el maestro y la calificación de cada curso.
 - Usar el plugin de Datatables (https://datatables.net/).
 - Desarrollar toda la interfaz del usuario (UI) desde cero.
 - Alguna otra funcionalidad acorde a la lógica del negocio.
