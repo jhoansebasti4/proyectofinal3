@@ -86,10 +86,6 @@ A continuación te presentaremos los requerimientos que se tomarán en cuenta pa
 
 ### ESTRUCTURA - 23 puntos
 
-- MVC y POO. - 20 puntos
-- Conexión reutilizada. - 5 puntos
-- El archivo index.php se encuentra en la carpeta raíz del proyecto. - 5 puntos
-
 | Requerimiento | Valor (puntaje) |
 | :--- | :---: |
 | MVC y POO. | 20 |
@@ -109,7 +105,7 @@ A continuación te presentaremos los requerimientos que se tomarán en cuenta pa
 | MAESTRO | 6 |
 | ALUMNO | 4 |
 | ESTRUCTURA | 23 |
-| Total | 23 puntos |
+| Total | 100 puntos |
 
 ## Consideraciones OPCIONALES que suman puntos:
 
