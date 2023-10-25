@@ -37,15 +37,79 @@ En este repositorio te hemos dado los siguientes archivos:
 
 ## Consideraciones para la calificación
 
-A continuación te presentaremos los puntos que se tomarán en cuenta para la calificacion del proyecto:
+A continuación te presentaremos los requerimientos que se tomarán en cuenta para la calificacion del proyecto, así como sus respectivos puntajes:
 
-- Te daremos una idea de interfaz de usuario (UI) como sugerencia. Sin embargo, no es obligatorio seguir estrictamente esa misma interfaz. Puedes cambiar a tu gusto los colores, tamaños de letra, etc. Pero debes respetar los colores del logo de la universidad o buscar otros que combinen con estos.
-- La interfaz del usuario (UI) debe tener el logo de la universidad.
-- Cada rol debe tener la funcionalidad especificada.
-- El proyecto debe ser realizado con Tailwind CSS y este debe ser instalado por medio de la línea de comandos o la terminal, no debes usar el CDN.
-- El proyecto debe ser estructurado de forma que sea fácil de entender y mantener.
-- Debes subir los archivos de tu proyecto a un repositorio en GitHub y este debe tener más de un commit.
+### Interfaz de Usuario (UI) - 17 puntos
+
+| Requerimiento | Valor (puntaje) |
+| :--- | :---: |
+| El proyecto ha sido realizado con Tailwind CSS. | 5 |
+| Instaló Tailwind CSS por medio de CLI. | 5 |
+| La interfaz del usuario (UI) tiene el logo de la universidad. | 4 |
+| Respetar los colores del logo de la universidad o buscar otros que combinen con estos. | 3 |
+| Total | 17 puntos |
+
+### ADMIN - 50 puntos
+
+| Requerimiento | Valor (puntaje) |
+| :--- | :---: |
+| Crear registros de maestros (CRUD). | 4 |
+| Leer registros de maestros (CRUD). | 3 |
+| Actualizar registros de maestros (CRUD). | 4 |
+| Eliminar registros de maestros (CRUD). | 3 |
+| Crear registros de alumnos (CRUD). | 4 |
+| Leer registros de alumnos (CRUD). | 3 |
+| Actualizar registros de alumnos (CRUD). | 4 |
+| Eliminar registros de alumnos (CRUD). | 3 |
+| Crear materias (CRUD). | 4 |
+| Leer materias (CRUD). | 3 |
+| Actualizar materias (CRUD). | 4 |
+| Eliminar materias (CRUD). | 3 |
+| Relacionar un maestro a un curso (o más). | 4 |
+| Cambiar el rol de cada usuario. | 4 |
+| Total | 50 puntos |
+
+
+### MAESTRO - 6 puntos
+
+| Requerimiento | Valor (puntaje) |
+| :--- | :---: |
+| Ver la clase a la que como maestro está asignado. | 3 |
+| Ver los datos de sus alumnos. | 3 |
+| Total | 6 puntos |
+
+### ALUMNO - 4 puntos
+
+| Requerimiento | Valor (puntaje) |
+| :--- | :---: |
+| Ver y cambiar las clases en las que está registrado. | 4 |
+
+### ESTRUCTURA - 23 puntos
+
+- MVC y POO. - 20 puntos
+- Conexión reutilizada. - 5 puntos
+- El archivo index.php se encuentra en la carpeta raíz del proyecto. - 5 puntos
+
+| Requerimiento | Valor (puntaje) |
+| :--- | :---: |
+| MVC y POO. | 20 |
+| El archivo index.php se encuentra en la carpeta raíz del proyecto. | 3 |
+| Total | 23 puntos |
+
+### EXTRA
+
 - Si existiesen requerimientos extras que se hayan realizado (de la lista de consideraciones opcionales o de tu propia iniciativa), debes dejar una nota en el archivo README.md de tu repositorio en GitHub que especifique cada una.
+
+### ACUMULADO
+
+| Categoría | Valor (puntaje) |
+| :--- | :---: |
+| Interfaz de Usuario (UI) | 17 |
+| ADMIN | 50 |
+| MAESTRO | 6 |
+| ALUMNO | 4 |
+| ESTRUCTURA | 23 |
+| Total | 23 puntos |
 
 ## Consideraciones OPCIONALES que suman puntos:
 
@@ -59,3 +123,4 @@ A continuación te presentaremos los puntos que se tomarán en cuenta para la ca
 - Usar el plugin de Datatables (https://datatables.net/).
 - Desarrollar toda la interfaz del usuario (UI) desde cero.
 - Alguna otra funcionalidad acorde a la lógica del negocio.
+
