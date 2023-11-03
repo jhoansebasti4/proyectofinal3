@@ -1,23 +1,14 @@
 <?php
 
-// controllers/MaestroController.php
-
-class AlumnoController
-{
-    private $model;
-
-    public function __construct($db)
-    {
-        $this->model = new AlumnoModel($db);
+class AlumnoController {
+    public function verCalificaciones() {
+        // Lógica para ver las calificaciones de un alumno
     }
 
-    public function index()
-    {
-        // Lógica para mostrar la vista de maestro.
+    public function verClases() {
+        // Lógica para ver las clases en las que está registrado el alumno
     }
 
-    public function verAlumnos()
-    {
-        // Lógica para mostrar los alumnos de un maestro.
-    }
+    // Otras funciones relacionadas con alumnos
 }
+

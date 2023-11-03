@@ -1,3 +1,14 @@
+<?php
+// usuarios.php
+require_once '../../models/AdminModel.php'; // Ajusta la ruta según la ubicación real del archivo
+
+// Instanciamos el modelo AdminModel
+$model = new AdminModel();
+
+// Obtenemos la lista de usuarios desde el modelo (en lugar de permisos)
+$usuarios = $model->getUsuarios(); // Asegúrate de que el método exista en tu modelo
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +48,7 @@
                 
             </div>
          <!-- AL DAR CLIC EN PERMISOS DEBE APARECER ESTA TABLA PERMISOS -->
-         <div class="w-3/4 p-4 bg-white rounded-lg shadow-md" id="tablaPermisos">
+         <div class="w-3/4 p-4 bg-white rounded-lg shadow-md" id="tablaUsuarios">
              <div class="text-right">
                  <button class="btn btn-link text-red-500" onclick="cerrarSesion()">Salir</button>
                 </div>
@@ -49,11 +60,27 @@
                             <th>ID</th>
                             <th>Email/Usuario</th>
                             <th>Permiso</th>
-                            <th>Estado</th>      
+                            <th>Estado</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
-                </table>
+                    <tbody>
+                        <?php foreach ($usuarios as $usuario): ?>
+                            <tr>
+                                <td><?php echo $usuario['ID']; ?></td>
+                                <td><?php echo $usuario['Email_Usuario']; ?></td>
+                                <td><?php echo $usuario['Permiso']; ?></td>
+                                <td><?php echo $usuario['Estado']; ?></td>
+                                <td class="space-x-2">
+                                    <button class="px-2 py-1 bg-blue-500 text-white rounded hover:bg-blue-700">Edit</button>
+                                    <button class="px-2 py-1 bg-red-500 text-white rounded hover:bg-red-700">Elim</button>
+                                </td>
+                            </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                    
+                    
                 <!-- Formulario de edición oculto -->
                 <div id="formularioEdicion" class="hidden bg-gray-100 p-4 rounded-md my-4">
                     <h1 class="text-2xl font-semibold mb-2">Editar Permiso</h1>

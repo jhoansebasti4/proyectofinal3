@@ -1,16 +1,22 @@
 <?php
 
-
-
-class ClaseModel
-{
-    private $conn;
-    private $table = "clase";
-
-    public function __construct($db)
-    {
-        $this->conn = $db;
+class ClaseModel {
+    // Funciones para interactuar con la tabla de clases y realizar operaciones CRUD
+    public function createClase($data) {
+        // Lógica para crear una nueva clase
     }
 
-    // Implementa los métodos CRUD para los maestros (crear, leer, actualizar, eliminar).
+    public function readClases() {
+        // Lógica para leer la lista de clases
+    }
+
+    public function updateClase($id, $data) {
+        // Lógica para actualizar una clase existente
+    }
+
+    public function deleteClase($id) {
+        // Lógica para eliminar una clase
+    }
+
+    // Otras funciones relacionadas con clases
 }

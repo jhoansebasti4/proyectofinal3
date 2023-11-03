@@ -1,30 +1,46 @@
+<?php
+// Incluye el archivo de configuración de la base de datos y otros archivos necesarios
+require_once(__DIR__ . '/models/DataBase.php');
+require_once(__DIR__ . '/controllers/AdminController.php');
+require_once(__DIR__ . '/controllers/AlumnoController.php');
+require_once(__DIR__ . '/controllers/MaestroController.php');
+require_once(__DIR__ . '/controllers/LoginController.php'); // Cambio de nombre
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión - Plataforma Virtual</title>
-    <!-- Incluye los estilos de Tailwind CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css">
-    <!-- Agrega aquí tus propios estilos CSS si es necesario -->
-</head>
-<body class="bg-gray-200 flex items-center justify-center h-screen">
-    <div class="bg-white p-8 rounded-lg shadow-md w-96">
-    <img src="/assets/logo.jpg" alt="Imagen del Admin" class="w-16 h-16 rounded-full mx-auto">
-        <h2 class="text-2xl font-semibold mb-4">Iniciar Sesión</h2>
-        <form action="/models/auth.php" method="POST" class="space-y-4">
-            <div>
-                <label for="email" class="block text-gray-600">Correo Electrónico</label>
-                <input type="email" id="email" name="email" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500" required>
-            </div>
-            <div>
-                <label for="password" class="block text-gray-600">Contraseña</label>
-                <input type="password" id="password" name="password" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-blue-500" required>
-            </div>
-            <button type="submit" class="w-full bg-blue-500 text-white rounded py-2">Iniciar Sesión</button>
-        </form>
-        <p class="text-center text-sm text-gray-500 mt-4">¿No tienes una cuenta? <a href="/registro" class="text-blue-500">Regístrate</a></p>
-    </div>
-</body>
-</html>
+$loginController = new LoginController();
+
+// Define las rutas y los controladores asociados.
+$routes = array(
+    'login' => 'login',   // Ruta a la página de inicio de sesión
+    'admin' => 'admin',   // Ruta a la página de administrador
+    'alumno' => 'alumno', // Ruta a la página de alumno
+    'maestro' => 'maestro' // Ruta a la página de maestro
+);
+
+// Verifica si la ruta solicitada existe en la lista de rutas.
+if (isset($_GET['url']) && array_key_exists($_GET['url'], $routes)) {
+    $controllerName = $routes[$_GET['url']];
+    $controller = new $controllerName();
+
+    // Llama a la función correspondiente en el controlador.
+    $action = 'login'; // Acción predeterminada
+    if (isset($_GET['action'])) {
+        $action = $_GET['action'];
+    }
+
+    // Verifica si el usuario está autenticado.
+    if ($_GET['url'] !== 'login' && !isset($_SESSION['user_id'])) {
+        // Si el usuario no está autenticado y la ruta no es la de inicio de sesión, redirige al inicio de sesión.
+        header("Location: index.php?url=login");
+        exit();
+    }
+
+    // Llama al controlador y la acción correspondientes.
+    $controller->$action();
+} elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $loginController->login();
+} elseif (isset($_GET['logout'])) {
+    $loginController->logout();
+} else {
+    // Cambia la inclusión de la vista para que sea la página de inicio de sesión.
+    include('views/login.php');
+}
