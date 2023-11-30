@@ -2,7 +2,7 @@
 require_once '/controller/AdminController.php';
 require_once '/models/AdminModel.php';
 
-$controller = new AdminController();
+$controller = new AdminController($db);
 $model = new AdminModel();
 
 if (isset($_GET['action'])) {
